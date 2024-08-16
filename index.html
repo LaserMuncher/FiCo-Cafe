@@ -27,11 +27,9 @@
     <section id="home" class="hero">
         <div class="carousel">
             <div class="carousel-inner">
-                <img src="images/logo.jpg" alt="Image 1">
-                <img src="images/logo.jpg" alt="Image 2">
-                <img src="images/logo.jpg" alt="Image 3">
-                <img src="images/logo.jpg" alt="Image 4">
-                <img src="images/logo.jpg" alt="Image 5">
+                <img src="images/1 carousel.jpg" alt="Image 1">
+                <img src="images/2 carousel.jpg" alt="Image 2">
+                <img src="images/3 carousel.jpg" alt="Image 3">
             </div>
             <div class="carousel-controls-container">
                 <button class="carousel-control prev">❮</button>
@@ -39,8 +37,6 @@
                     <button class="carousel-button" data-slide="0"></button>
                     <button class="carousel-button" data-slide="1"></button>
                     <button class="carousel-button" data-slide="2"></button>
-                    <button class="carousel-button" data-slide="3"></button>
-                    <button class="carousel-button" data-slide="4"></button>
                 </div>
                 <button class="carousel-control next">❯</button>
             </div>
@@ -143,6 +139,12 @@
 
         // Initialize the carousel
         showImage(index);
+
+        window.addEventListener('scroll', function() {
+    const header = document.querySelector('header');
+    header.classList.toggle('scrolled', window.scrollY > 50); // Adjust the scroll threshold as needed
+});
+
     </script>
 </body>
 </html>
